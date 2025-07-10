@@ -53,6 +53,8 @@ async def get_category(complaint_id: int, text: str, session: AsyncSession) -> N
         )
     category = response.choices[0].message.content
     if category not in list(map(str, CategoryType)):
+        print(category)
+        print(response.choices[0].message)
         # logger.error(f"Invalid category: {category}")
         category = CategoryType.other
     category = CategoryType(category)
