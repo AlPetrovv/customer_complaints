@@ -21,4 +21,17 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 ### Postman Collections
 
+##  post /api/complaints/
 ![workspace 1](./postman_collections/img.png)
+
+##  get /api/complaints/
+![workspace 1](./postman_collections/img_1.png)
+
+##  path /api/complaints/
+![workspace 1](./postman_collections/img_2.png)
+
+##  [ApiLayer](https://api.apilayer.com/sentiment/analysis)
+# post 
+![workspace 1](./postman_collections/img_3.png)
+# headers 
+![workspace 1](./postman_collections/img_4.png)

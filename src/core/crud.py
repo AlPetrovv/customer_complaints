@@ -2,7 +2,6 @@ from typing import Any
 
 from sqlalchemy import ScalarResult, Sequence, select
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy.orm import joinedload, selectinload
 
 from core.types import MODEL, TYPE_MODEL
 
@@ -11,11 +10,16 @@ async def get_model(
         session: AsyncSession,
         model: TYPE_MODEL,
         conditions: list[Any] = None
-) -> MODEL|None:
+) -> MODEL | None:
     smtp = select(model)
     if conditions is not None:
         smtp = smtp.where(*conditions)
     return await session.scalar(smtp)
+
+
+async def get_models_by(session: AsyncSession, model: TYPE_MODEL, conditions) -> Sequence[MODEL | None]:
+    result: ScalarResult[MODEL] = await session.scalars(select(model).where(*conditions))
+    return result.all()
 
 
 async def create_model(session: AsyncSession, model: TYPE_MODEL, model_in) -> MODEL:
