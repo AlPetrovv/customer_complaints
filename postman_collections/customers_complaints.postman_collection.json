@@ -10,17 +10,33 @@
 			"name": "apilayer sentimant",
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "apikey",
+						"value": "Yourapikey",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "Hello!",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "{{LOCALHOST}}/auth/jwt/create/",
+					"raw": "https://api.apilayer.com/sentiment/analysis",
+					"protocol": "https",
 					"host": [
-						"{{LOCALHOST}}"
+						"api",
+						"apilayer",
+						"com"
 					],
 					"path": [
-						"auth",
-						"jwt",
-						"create",
-						""
+						"sentiment",
+						"analysis"
 					]
 				}
 			},
