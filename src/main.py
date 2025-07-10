@@ -1,7 +1,10 @@
 from fastapi import FastAPI
+
+from error_handlers import register_errors_handlers
 from routers import api_router
 
 app = FastAPI()
+register_errors_handlers(app)
 
 app.include_router(api_router)
 
