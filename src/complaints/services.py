@@ -1,5 +1,3 @@
-from logging import Logger
-
 from aiohttp import ClientSession
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -9,7 +7,6 @@ from core.enums import CategoryType
 from core import exceptions
 
 
-logger = Logger(__name__)
 SENTIMENT_URL = settings.integration.sentiment_api_url
 SENTIMENT_API_KEY = settings.integration.sentiment_api_key
 
@@ -55,12 +52,8 @@ async def get_category(complaint_id: int, text: str, session: AsyncSession) -> N
       {'role': 'user', 'content': text},
     ]
         )
-    category = response.choices[0].message.content
+    category = response.choices[0].message.content.lower()
     if category not in list(map(str, CategoryType)):
-        logger.error(f'{response}')
-        print(category)
-        print(response.choices[0].message)
-        # logger.error(f"Invalid category: {category}")
         category = CategoryType.other
     category = CategoryType(category)
     complaint_in = schemas.ComplaintUpdatePartial(id=complaint_id, category=category)
