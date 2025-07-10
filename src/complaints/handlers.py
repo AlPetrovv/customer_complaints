@@ -5,7 +5,7 @@ from starlette import status
 
 from config import settings
 
-from core.enums import SentimentType
+from core.enums import SentimentType, CategoryType
 from db.helper import db_helper
 
 from complaints import schemas
@@ -25,6 +25,7 @@ async def create_complaint(complaint_in: schemas.ComplaintCreate,
     sentiment = await services.get_sentiment(complaint_in.text)
     if sentiment is not None:
         complaint_in.sentiment = SentimentType(sentiment)
+    complaint_in.category = CategoryType.other
     complaint = await crud.create_complaint(session, complaint_in)
     await services.get_category(complaint_id=complaint.id, text=complaint_in.text, session=session)
     return complaint
