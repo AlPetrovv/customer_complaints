@@ -11,8 +11,7 @@ Use the `INSTALL.md` to get started.
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-get logo from [here](https://logos-world.com/)
+
 ![FastAPI](https://img.shields.io/badge/fastapi-%23000000.svg?style=for-the-badge&logo=fastapi&logoColor=white) 
 ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-%231485B4.svg?style=for-the-badge&logo=SQLAlchemy&logoColor=white]) 
 ![Alembic](https://img.shields.io/badge/Alembic-%231485B4.svg?style=for-the-badge&logo=alembic&logoColor=white]) 
