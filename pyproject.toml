@@ -1,0 +1,80 @@
+[tool.poetry]
+name = "customer-complaints"
+version = "0.1.0"
+description = ""
+authors = ["alelsandr <sanya10081999@gmail.com >"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.116.0"
+sqlalchemy = "^2.0.41"
+alembic = "^1.16.3"
+aiosqlite = "^0.21.0"
+pydantic = "^2.11.7"
+pydantic-settings = "^2.10.1"
+ruff = "^0.12.2"
+isort = "^6.0.1"
+aiohttp = "^3.12.13"
+uvicorn = "^0.35.0"
+openai = "^1.93.3"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.4.1"
+factory-boy = "^3.3.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+py_version=310
+default_section = "THIRDPARTY"
+known_first_party = ["apps","local_car_hires"]
+known_django = "django"
+known_django_apps = [
+    "simple_history",
+    "modeltranslation",
+    "easy_thumbnails",
+    "ckeditor",
+    "ckeditor_uploader",
+    "rangefilter",
+    "ipware",
+]
+sections = [
+    "FUTURE",
+    "STDLIB",
+    "THIRDPARTY",
+    "FIRSTPARTY",
+    "LOCALFOLDER",
+]
+line_length=120
+multi_line_output = 3
+include_trailing_comma = true
+extend_skip = [
+    "migrations",
+]
+
+[tool.ruff]
+src = [
+    "apps/*",
+    "context_processors/*",
+    "local_car_hires/*",
+    "tools/*",
+]
+line-length = 120
+target-version = "py312"
+exclude = [
+    "migrations",
+]
+
+[tool.ruff.lint]
+select = [
+    "E501",  # Checks for lines that exceed the specified maximum character length
+    "W292",  # Checks for files missing a new line at the end of the file
+    "F401",  # Checks for unused imports
+]
+
+

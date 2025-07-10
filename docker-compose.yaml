@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+    app:
+        build: .
+        container_name: customer_complaints-app
+        ports:
+            - "8000:8000"
+        volumes:
+            - app:/app
+        env_file:
+          - envs/app.env
+          - envs/db.env
+        command: ["sh", "entrypoint.sh"]
+        user: app
+        restart: unless-stopped
+
+volumes:
+    app:
