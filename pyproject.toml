@@ -29,46 +29,13 @@ factory-boy = "^3.3.3"
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
-[tool.isort]
-py_version=310
-default_section = "THIRDPARTY"
-known_first_party = ["apps","local_car_hires"]
-known_django = "django"
-known_django_apps = [
-    "simple_history",
-    "modeltranslation",
-    "easy_thumbnails",
-    "ckeditor",
-    "ckeditor_uploader",
-    "rangefilter",
-    "ipware",
-]
-sections = [
-    "FUTURE",
-    "STDLIB",
-    "THIRDPARTY",
-    "FIRSTPARTY",
-    "LOCALFOLDER",
-]
-line_length=120
-multi_line_output = 3
-include_trailing_comma = true
-extend_skip = [
-    "migrations",
-]
-
 [tool.ruff]
 src = [
-    "apps/*",
+    "src/*",
     "context_processors/*",
-    "local_car_hires/*",
-    "tools/*",
 ]
 line-length = 120
 target-version = "py312"
-exclude = [
-    "migrations",
-]
 
 [tool.ruff.lint]
 select = [
