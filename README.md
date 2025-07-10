@@ -13,7 +13,7 @@ Use the `INSTALL.md` to get started.
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* [![FastAPI](https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png)](https://fastapi.tiangolo.com/)
+* [![FastAPI](https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png?size=100)](https://fastapi.tiangolo.com/)
 * [![Docker](https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png)](https://www.docker.com/)
 * [![SQLite](https://upload.wikimedia.org/wikipedia/commons/9/99/SQLite_Logo.svg)](https://sqlite.org/)
 * [![OpenAI](https://platform.openai.com/static/images/openai-logo.svg)](https://openai.com/)
