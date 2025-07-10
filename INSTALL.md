@@ -40,7 +40,7 @@ Before getting started, you will need to have Python 3.10 for running local serv
    and replace `xxx` with your data
 10. Run server
     ```sh
-    poetry run uvicorn src.main:app --reload
+    cd src && python3 main.py
     ```
     if you use docker
     ```sh
