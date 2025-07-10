@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "d7af6777-4166-4e5f-86d1-4f3a02e8bdca",
+		"name": "customers_complaints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26140232"
+	},
+	"item": [
+		{
+			"name": "apilayer sentimant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{LOCALHOST}}/auth/jwt/create/",
+					"host": [
+						"{{LOCALHOST}}"
+					],
+					"path": [
+						"auth",
+						"jwt",
+						"create",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create complaints",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"Hello!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{LOCALHOST}}api/complaints/",
+					"host": [
+						"{{LOCALHOST}}api"
+					],
+					"path": [
+						"complaints",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get complaints",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"status\": \"closed\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{LOCALHOST}}api/complaints/",
+					"host": [
+						"{{LOCALHOST}}api"
+					],
+					"path": [
+						"complaints",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
