@@ -42,7 +42,7 @@ async def get_sentiment(text: str) -> str|None:
 
 async def get_category(complaint_id: int, text: str, session: AsyncSession) -> None:
     prompt = ('You are a helpful assistant. '
-              'Your response should be a single word category for the following text(payment, technical or other):')
+              'Your response should be a single word category(payment, technical or other) for the following text')
 
     response = settings.integration.openai_client.chat.completions.create(
             model=settings.integration.openai_model,
