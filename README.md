@@ -12,12 +12,13 @@ Use the `INSTALL.md` to get started.
 ### Built With
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
-* [![FastAPI](https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png?size=100)](https://fastapi.tiangolo.com/)
-* [![Docker](https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png)](https://www.docker.com/)
-* [![SQLite](https://upload.wikimedia.org/wikipedia/commons/9/99/SQLite_Logo.svg)](https://sqlite.org/)
-* [![OpenAI](https://platform.openai.com/static/images/openai-logo.svg)](https://openai.com/)
-* [![APILayer](https://apilayer.com/img/logo.svg)](https://apilayer.com/)
+get logo from [here](https://logos-world.com/)
+![FastAPI](https://img.shields.io/badge/fastapi-%23000000.svg?style=for-the-badge&logo=fastapi&logoColor=white) 
+![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-%231485B4.svg?style=for-the-badge&logo=SQLAlchemy&logoColor=white]) 
+![Alembic](https://img.shields.io/badge/Alembic-%231485B4.svg?style=for-the-badge&logo=alembic&logoColor=white]) 
+![Pydantic](https://img.shields.io/badge/pydantic-%231485B4.svg?style=for-the-badge&logo=pydantic&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-compose-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+![SQLite](https://img.shields.io/badge/sqlite-%230db7ed.svg?style=for-the-badge&logo=sqlite&logoColor=white)
 
 ### Postman Collections
 
